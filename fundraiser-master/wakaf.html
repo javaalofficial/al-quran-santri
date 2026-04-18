@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Form Wakaf &mdash; Al Qur'an Santri (AQSI)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/ooo.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap" id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center position-relative">
+
+          <div class="site-logo">
+            <img src="images2/LOGO-AQSI.png" alt="AQSI" class="text-white site-logo"></a>
+          </div>
+
+          <nav class="site-navigation text-left ml-auto " role="navigation">
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about.html" class="nav-link">Tentang</a></li>
+              <li><a href="causes.html" class="nav-link">Program Wakaf</a></li>
+              <li><a href="blog.html" class="nav-link">Blog</a></li>
+              <li class="active"><a href="wakaf.html" class="nav-link">Form Wakaf</a></li>
+              <li><a href="konfirmasi.html" class="nav-link">Konfirmasi</a></li>
+            </ul>
+          </nav>
+
+          <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-white"><span class="icon-menu h3 text-white"></span></a></div>
+
+        </div>
+      </div>
+
+    </header>
+
+    <div class="owl-carousel-wrapper">
+
+      <div class="box-92819">
+        <h1 class="text-white mb-3">Form Wakaf Al-Qur'an</h1>
+        <p class="lead text-white">Tunaikan Amanah Anda, Raih Pahala Jariyah Tanpa Batas</p>
+      </div>
+
+      <div class="ftco-cover-1 overlay" style="background-image: url('images2/wakaf%20al%20Qur%27an%20untuk%20Santri.webp');"></div>
+
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="mb-5">
+          <h2 class="text-cursive mb-3">Pilih Program Wakaf Anda</h2>
+          <p class="mb-4">Kami menyediakan tiga pilihan program wakaf yang dapat disesuaikan dengan kebutuhan dan niat Anda. Setiap program dirancang untuk memberikan dampak maksimal bagi para santri penghafal Al-Qur'an di pelosok nusantara.</p>
+        </div>
+
+        <!-- Wakaf Options Cards -->
+        <div class="row mb-5">
+          <!-- Option 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="bg-light p-4 rounded h-100">
+              <div class="mb-3">
+                <i class="fas fa-book-open fa-3x text-primary"></i>
+              </div>
+              <h4 class="mb-3">Wakaf Mushaf Personal</h4>
+              <p class="mb-4">Berikan dukungan fasilitas mengaji yang layak untuk satu pejuang Al-Qur'an. Masih banyak santri yang harus bergantian menggunakan mushaf robek.</p>
+              <button class="btn btn-primary" onclick="selectProgram('personal')">Pilih Program</button>
+            </div>
+          </div>
+
+          <!-- Option 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="bg-light p-4 rounded h-100">
+              <div class="mb-3">
+                <i class="fas fa-heart fa-3x text-danger"></i>
+              </div>
+              <h4 class="mb-3">Hadiah Jariyah Orang Tua</h4>
+              <p class="mb-4">Kirimkan pahala terbaik untuk Ayah dan Ibu tercinta. Wakafkan mushaf baru atas nama mereka sebagai bukti cinta yang tak terputus.</p>
+              <button class="btn btn-primary" onclick="selectProgram('parent')">Pilih Program</button>
+            </div>
+          </div>
+
+          <!-- Option 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="bg-light p-4 rounded h-100">
+              <div class="mb-3">
+                <i class="fas fa-users fa-3x" style="color: #27ae60;"></i>
+              </div>
+              <h4 class="mb-3">Wakaf Kolektif Institusi</h4>
+              <p class="mb-4">Penuhi kebutuhan ketersediaan Al-Qur'an di asrama atau rumah tahfidz pelosok untuk memastikan setiap santri memiliki mushaf pribadi.</p>
+              <button class="btn btn-primary" onclick="selectProgram('collective')">Pilih Program</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Section -->
+        <div id="formSection" style="display: none;">
+          <div class="row">
+            <div class="col-lg-8 mb-5">
+              <h3 class="mb-4">Data Wakaf</h3>
+              <form action="thankyou.html?dashboard=true" method="get" id="wakafForm">
+                
+                <!-- Program Type (Hidden) -->
+                <input type="hidden" id="programType" name="programType" value="">
+
+                <!-- Personal Info Section -->
+                <div class="form-group row">
+                  <div class="col-md-6 mb-4 mb-lg-0">
+                    <label for="firstName" class="mb-2">Nama Lengkap <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Nama Lengkap" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="mb-2">No. Telepon <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="08xx-xxxx-xxxx" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="email" class="mb-2">Alamat Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email address" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="address" class="mb-2">Alamat Lengkap <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Alamat lengkap" required>
+                  </div>
+                </div>
+
+                <!-- Personal Program Section -->
+                <div id="personalSection" style="display: none;" class="mb-4 p-4 bg-light rounded">
+                  <h5 class="mb-3">Informasi Wakaf Mushaf Personal</h5>
+                  <div class="form-group">
+                    <label for="santriName" class="mb-2">Nama Santri Penerima <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="santriName" name="santriName" placeholder="Nama santri yang akan menerima wakaf">
+                  </div>
+                  <div class="form-group">
+                    <label for="santriAge" class="mb-2">Usia Santri</label>
+                    <input type="number" class="form-control" id="santriAge" name="santriAge" placeholder="Usia santri">
+                  </div>
+                  <div class="form-group">
+                    <label for="pesantrenName" class="mb-2">Nama Pesantren / Lokasi</label>
+                    <input type="text" class="form-control" id="pesantrenName" name="pesantrenName" placeholder="Nama pesantren atau lokasi penyaluran">
+                  </div>
+                </div>
+
+                <!-- Parent Program Section -->
+                <div id="parentSection" style="display: none;" class="mb-4 p-4 bg-light rounded">
+                  <h5 class="mb-3">Informasi Hadiah Jariyah Orang Tua</h5>
+                  <div class="form-group">
+                    <label for="parentName" class="mb-2">Nama Orang Tua (yang akan didoakan) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="parentName" name="parentName" placeholder="Nama ayah atau ibu">
+                  </div>
+                  <div class="form-group">
+                    <label for="parentStatus" class="mb-2">Status <span class="text-danger">*</span></label>
+                    <select class="form-control" id="parentStatus" name="parentStatus">
+                      <option value="">-- Pilih Status --</option>
+                      <option value="ayah">Ayah</option>
+                      <option value="ibu">Ibu</option>
+                      <option value="kedua-orang-tua">Kedua Orang Tua</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="mb-2">Catatan Khusus (Opsional)</label>
+                    <textarea class="form-control" name="parentNote" placeholder="Pesan atau doa khusus untuk orang tua Anda" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <!-- Collective Program Section -->
+                <div id="collectiveSection" style="display: none;" class="mb-4 p-4 bg-light rounded">
+                  <h5 class="mb-3">Informasi Wakaf Kolektif Institusi</h5>
+                  <div class="form-group">
+                    <label for="institutionName" class="mb-2">Nama Institusi (Pesantren/Asrama/Rumah Tahfidz) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="institutionName" name="institutionName" placeholder="Nama institusi penerima wakaf">
+                  </div>
+                  <div class="form-group">
+                    <label for="institutionLocation" class="mb-2">Lokasi Institusi <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="institutionLocation" name="institutionLocation" placeholder="Kabupaten/Kota, Provinsi">
+                  </div>
+                  <div class="form-group">
+                    <label for="institutionPhone" class="mb-2">No. Telepon Institusi</label>
+                    <input type="tel" class="form-control" id="institutionPhone" name="institutionPhone" placeholder="No. telepon institusi">
+                  </div>
+                  <div class="form-group">
+                    <label for="santriCount" class="mb-2">Jumlah Santri Penerima</label>
+                    <input type="number" class="form-control" id="santriCount" name="santriCount" placeholder="Jumlah santri yang akan menerima wakaf">
+                  </div>
+                </div>
+
+                <!-- Donation Amount -->
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="donationAmount" class="mb-2">Jumlah Wakaf <span class="text-danger">*</span></label>
+                    <select class="form-control" id="donationAmount" name="donationAmount" required>
+                      <option value="">-- Pilih Jumlah --</option>
+                      <option value="1_mushaf">1 Mushaf Al-Qur'an</option>
+                      <option value="3_mushaf">3 Mushaf Al-Qur'an</option>
+                      <option value="5_mushaf">5 Mushaf Al-Qur'an</option>
+                      <option value="10_mushaf">10 Mushaf Al-Qur'an</option>
+                      <option value="custom">Jumlah Lainnya</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group row" id="customAmountSection" style="display: none;">
+                  <div class="col-md-12">
+                    <label for="customAmount" class="mb-2">Jumlah Custom (Mushaf)</label>
+                    <input type="number" class="form-control" id="customAmount" name="customAmount" placeholder="Masukkan jumlah mushaf">
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="message" class="mb-2">Catatan atau Pesan (Opsional)</label>
+                    <textarea class="form-control" id="message" name="message" placeholder="Ceritakan alasan atau doa Anda untuk program wakaf ini" rows="5"></textarea>
+                  </div>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="terms" name="terms" required>
+                      <label class="custom-control-label" for="terms">
+                        Saya setuju dengan syarat dan ketentuan program wakaf dan menyetujui data saya digunakan untuk keperluan penyaluran
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5 rounded-0" value="Lanjut ke Pembayaran">
+                  </div>
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-block btn-secondary text-white py-3 px-5 rounded-0" onclick="resetForm()">Kembali ke Pilihan Program</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-lg-4 ml-auto">
+              <div class="bg-white p-3 p-md-5">
+                <h3 class="text-cursive mb-4">Wakaf Al-Qur'an Jariyah</h3>
+                <p class="mb-4" style="font-style: italic; color: #666;">
+                  "Apabila anak Adam meninggal dunia, maka terputuslah amalnya kecuali tiga perkara: sedekah jariyah, ilmu yang bermanfaat, atau anak shalih yang mendoakannya."
+                </p>
+                <p style="font-size: 12px; color: #999;">HR. Muslim</p>
+                
+                <hr class="my-4">
+                
+                <h5 class="mb-3">Keuntungan Wakaf Bersama AQSI</h5>
+                <ul class="list-unstyled footer-link small">
+                  <li class="d-block mb-2">
+                    <span class="d-block text-muted text-uppercase font-weight-bold"><i class="fas fa-check text-success mr-2"></i>Distribusi Merata</span>
+                    <span>Mencapai pesantren di lokasi terpencil yang jarang tersentuh bantuan</span>
+                  </li>
+                  <li class="d-block mb-2">
+                    <span class="d-block text-muted text-uppercase font-weight-bold"><i class="fas fa-check text-success mr-2"></i>Laporan Berkala</span>
+                    <span>Terima foto dan laporan penyaluran yang transparan dan real-time</span>
+                  </li>
+                  <li class="d-block mb-2">
+                    <span class="d-block text-muted text-uppercase font-weight-bold"><i class="fas fa-check text-success mr-2"></i>Doa Santri</span>
+                    <span>Nama Anda akan didoakan santri setiap hari dari seluruh pesantren</span>
+                  </li>
+                </ul>
+
+                <hr class="my-4">
+
+                <h5 class="mb-3">Info Kontak AQSI</h5>
+                <ul class="list-unstyled footer-link small">
+                  <li class="d-block mb-2">
+                    <span class="d-block text-muted small text-uppercase font-weight-bold">Telepon:</span>
+                    <span>(021) XXXX-XXXX</span>
+                  </li>
+                  <li class="d-block mb-2">
+                    <span class="d-block text-muted small text-uppercase font-weight-bold">Email:</span>
+                    <span>info@aqsi.or.id</span>
+                  </li>
+                  <li class="d-block mb-2">
+                    <span class="d-block text-muted small text-uppercase font-weight-bold">Legalitas:</span>
+                    <span>Izin Badan Wakaf Indonesia (BWI): 3.3.00444</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
+          <div class="">
+            <h2 class="text-cursive">Bantu Santri Hafidz di Pelosok, Raih Pahala Tanpa Batas</h2>
+          </div>
+          <div class="ml-auto">
+            <a href="index.html" class="btn btn-primary">Kembali ke Beranda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-7">
+                <h2 class="footer-heading mb-4">Tentang Kami</h2>
+                <p>Yayasan Al-Qur'an Santri (AQSI) merupakan lembaga profesional di bidang pendidikan, sosial, dan keagamaan. Sejak berdiri pada tahun 2017, Yayasan AQSI konsisten menghadirkan program-program yang memberi manfaat nyata bagi masyarakat dan berperan dalam membangun kemaslahatan umat.</p>
+
+              </div>
+              <div class="col-md-4 ml-auto">
+                <h2 class="footer-heading mb-4">Legalitas</h2>
+                <ul class="list-unstyled">
+                  <li>Keputusan Menkumham AHU-0009981.AH.01.07/2017</li>
+                  <li>NPWP: 82.204.833.6-503.000</li>
+                  <li>Izin BWI: 3.3.00444</li>
+                  <li>Izin PUB: B/4745/460/VII/2024</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 ml-auto">
+
+            <div class="mb-5">
+              <h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>
+              <form action="#" method="post" class="footer-suscribe-form">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control rounded-0 border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>
+                  </div>
+                </div>
+            </div>
+
+            <h2 class="footer-heading mb-4">Follow Us</h2>
+            <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+                © 2024 Wakaf Al-Qur'an Santri. All Rights Reserved. | Colorlib Template
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    function selectProgram(program) {
+      document.getElementById('programType').value = program;
+      
+      // Hide all sections
+      document.getElementById('personalSection').style.display = 'none';
+      document.getElementById('parentSection').style.display = 'none';
+      document.getElementById('collectiveSection').style.display = 'none';
+      
+      // Show selected section
+      if (program === 'personal') {
+        document.getElementById('personalSection').style.display = 'block';
+      } else if (program === 'parent') {
+        document.getElementById('parentSection').style.display = 'block';
+      } else if (program === 'collective') {
+        document.getElementById('collectiveSection').style.display = 'block';
+      }
+      
+      // Show form section and scroll to it
+      document.getElementById('formSection').style.display = 'block';
+      document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function resetForm() {
+      document.getElementById('wakafForm').reset();
+      document.getElementById('formSection').style.display = 'none';
+      document.getElementById('programType').value = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show custom amount field when custom option is selected
+    document.getElementById('donationAmount').addEventListener('change', function() {
+      if (this.value === 'custom') {
+        document.getElementById('customAmountSection').style.display = 'block';
+      } else {
+        document.getElementById('customAmountSection').style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+
+</html>

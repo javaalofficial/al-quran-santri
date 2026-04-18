@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Dashboard &mdash; Al Qur'an Santri (AQSI)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/ooo.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Dashboard Specific Styles */
+    .sidebar {
+      background-color: #f8f9fa;
+      border-right: 1px solid #e0e0e0;
+      min-height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 250px;
+      z-index: 100;
+      padding-top: 20px;
+    }
+
+    .sidebar .nav-link {
+      color: #666;
+      padding: 12px 20px;
+      border-radius: 0;
+      margin-bottom: 5px;
+    }
+
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      color: white;
+    }
+
+    .sidebar .nav-link i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .widget {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      border-left: 4px solid #0f766e;
+    }
+
+    .widget-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .widget-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .widget-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .widget-icon.primary {
+      background: rgba(15, 118, 110, 0.1);
+      color: #0f766e;
+    }
+
+    .widget-icon.success {
+      background: rgba(39, 174, 96, 0.1);
+      color: #27ae60;
+    }
+
+    .widget-icon.warning {
+      background: rgba(243, 156, 18, 0.1);
+      color: #f39c12;
+    }
+
+    .widget-icon.info {
+      background: rgba(52, 152, 219, 0.1);
+      color: #3498db;
+    }
+
+    .widget-content h3 {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .widget-content p {
+      color: #666;
+      margin: 0;
+    }
+
+    .progress-container {
+      height: 8px;
+      background: #e0e0e0;
+      border-radius: 4px;
+      margin: 15px 0;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      border-radius: 4px;
+      transition: width 0.6s ease;
+    }
+
+    .chart-container {
+      height: 250px;
+      margin: 20px 0;
+    }
+
+    .btn-outline-emerald {
+      border-color: #0f766e;
+      color: #0f766e;
+    }
+
+    .btn-outline-emerald:hover {
+      background: #0f766e;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap" id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+<!-- <header class="site-navbar site-navbar-target bg-white shadow" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="site-logo">
+            <a href="index.html" class="d-flex align-items-center">
+              <img src="images2/LOGO-AQSI.png" alt="AQSI" class="me-2">
+              <span>Al Qur'an Santri</span>
+            </a>
+          </div>
+
+          <nav class="site-navigation text-left ml-auto " role="navigation">
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about.html" class="nav-link">Tentang</a></li>
+              <li><a href="causes.html" class="nav-link">Program Wakaf</a></li>
+              <li><a href="blog.html" class="nav-link">Blog</a></li>
+              <li><a href="wakaf.html" class="nav-link">Form Wakaf</a></li>
+              <li><a href="konfirmasi.html" class="nav-link">Konfirmasi</a></li>
+            </ul>
+          </nav>
+
+          <div class="ml-auto d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-dark"><span class="icon-menu h3"></span></a></div>
+        </div>
+      </div>
+    </header> -->
+
+    <!-- Dashboard Layout -->
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <div class="sidebar-brand text-center p-3">
+          <h4>AQSI Dashboard</h4>
+        </div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#overview">
+              <i class="fas fa-tachometer-alt"></i> Overview
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#donations">
+              <i class="fas fa-hand-holding-heart"></i> Donations
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#distribution">
+              <i class="fas fa-truck-loading"></i> Distribution
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#beneficiaries">
+              <i class="fas fa-user-graduate"></i> Beneficiaries
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reports">
+              <i class="fas fa-chart-bar"></i> Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#settings">
+              <i class="fas fa-cog"></i> Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Overview Section -->
+        <section id="overview">
+          <div class="container">
+            <h2 class="mb-4">Dashboard Overview</h2>
+            <div class="row">
+              <!-- Total Donations Widget -->
+              <div class="col-md-3">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Total Donations</div>
+                    <div class="widget-icon primary">
+                      <i class="fas fa-donate"></i>
+                    </div>
+                  </div>
+                  <div class="widget-content">
+                    <h3>$124,580</h3>
+                    <p>Total funds raised this year</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Total Mushaf Widget -->
+              <div class="col-md-3">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Mushaf Distributed</div>
+                    <div class="widget-icon success">
+                      <i class="fas fa-quran"></i>
+                    </div>
+                  </div>
+                  <div class="widget-content">
+                    <h3>2,840</h3>
+                    <p>Qurans distributed to students</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Active Donors Widget -->
+              <div class="col-md-3">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Active Donors</div>
+                    <div class="widget-icon warning">
+                      <i class="fas fa-users"></i>
+                    </div>
+                  </div>
+                  <div class="widget-content">
+                    <h3>1,240</h3>
+                    <p>Currently active donors</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pending Verification Widget -->
+              <div class="col-md-3">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Pending Verification</div>
+                    <div class="widget-icon info">
+                      <i class="fas fa-clock"></i>
+                    </div>
+                  </div>
+                  <div class="widget-content">
+                    <h3>24</h3>
+                    <p>Donations awaiting verification</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Progress Charts -->
+            <div class="row mt-4">
+              <div class="col-md-8">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Monthly Donation Trend</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="chart-container">
+                      <!-- In a real app, this would be a chart from Chart.js or similar -->
+                      <div style="height: 100%; background: linear-gradient(to top, #f8f9fa 0%, #e9ecef 100%); display: flex; align-items: center; justify-content: center; color: #666;">
+                        Chart Placeholder
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Distribution Progress</div>
+                  </div>
+                  <div class="widget-content">
+                    <p>Qurans distributed vs. target</p>
+                    <div class="progress-container">
+                      <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>75%</span>
+                      <span>2,130 / 2,840</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Recent Activity</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">New Wakaf Received</h5>
+                          <small class="text-muted">2 hours ago</small>
+                        </div>
+                        <p class="mb-1">Donor Ahmad Fakhurrahman donated 5 Mushaf Personal</p>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Distribution Completed</h5>
+                          <small class="text-muted">5 hours ago</small>
+                        </div>
+                        <p class="mb-1">Distributed 50 Mushaf to Pesantren Al-Hidayah</p>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">New Donor Registered</h5>
+                          <small class="text-muted">1 day ago</small>
+                        </div>
+                        <p class="mb-1">Welcome to our donor family: Siti Rahayu</p>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Report Generated</h5>
+                          <small class="text-muted">2 days ago</small>
+                        </div>
+                        <p class="mb-1">Monthly distribution report for March 2026</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Donations Section -->
+        <section id="donations" class="section">
+          <div class="container">
+            <h2 class="mb-4">Donations Management</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Add New Donation</div>
+                  </div>
+                  <div class="widget-content">
+                    <form>
+                      <div class="mb-3">
+                        <label for="donorName" class="form-label">Donor Name</label>
+                        <input type="text" class="form-control" id="donorName" placeholder="Enter donor name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="donationAmount" class="form-label">Amount ($)</label>
+                        <input type="number" class="form-control" id="donationAmount" placeholder="Enter amount">
+                      </div>
+                      <div class="mb-3">
+                        <label for="programType" class="form-label">Program Type</label>
+                        <select class="form-select" id="programType">
+                          <option>Wakaf Mushaf Personal</option>
+                          <option>Hadiah Jariyah Orang Tua</option>
+                          <option>Wakaf Kolektif Institusi</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="mushafCount" class="form-label">Number of Mushaf</label>
+                        <input type="number" class="form-control" id="mushafCount" placeholder="Enter quantity">
+                      </div>
+                      <button type="submit" class="btn btn-primary-custom">Add Donation</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Recent Donations</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Donor</th>
+                            <th>Amount</th>
+                            <th>Program</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Ahmad Fakhurrahman</td>
+                            <td>$150</td>
+                            <td>Mushaf Personal</td>
+                            <td>Apr 17, 2026</td>
+                            <td><span class="badge bg-success">Verified</span></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Siti Rahayu</td>
+                            <td>$300</td>
+                            <td>Mushaf Personal</td>
+                            <td>Apr 16, 2026</td>
+                            <td><span class="badge bg-success">Verified</span></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Yusuf Ibnu</td>
+                            <td>$75</td>
+                            <td>Mushaf Personal</td>
+                            <td>Apr 15, 2026</td>
+                            <td><span class="badge bg-warning">Pending</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Distribution Section -->
+        <section id="distribution" class="section">
+          <div class="container">
+            <h2 class="mb-4">Distribution Management</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Distribution Progress</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="progress-container">
+                      <div class="progress-bar" style="width: 65%;"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                      <span>65% Complete</span>
+                      <span>1,846 / 2,840 Mushaf</span>
+                    </div>
+                    
+                    <h5>Distribution by Location</h5>
+                    <div class="mb-3">
+                      <div class="d-flex justify-content-between">
+                        <span>Pesantren Al-Hidayah</span>
+                        <span>420 Mushaf</span>
+                      </div>
+                      <div class="progress" style="height: 8px;">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <div class="d-flex justify-content-between">
+                        <span>Madrasah Taqwa</span>
+                        <span>380 Mushaf</span>
+                      </div>
+                      <div class="progress" style="height: 8px;">
+                        <div class="progress-bar" style="width: 65%;"></div>
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <div class="d-flex justify-content-between">
+                        <span>Yatim Piantu Sejahtera</span>
+                        <span>310 Mushaf</span>
+                      </div>
+                      <div class="progress" style="height: 8px;">
+                        <div class="progress-bar" style="width: 55%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Upcoming Distributions</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Pesantren Al-Falah</h5>
+                          <small class="text-muted">Apr 20, 2026</small>
+                        </div>
+                        <p class="mb-1">150 Mushaf Personal</p>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Orang Tua Wakaf Program</h5>
+                          <small class="text-muted">Apr 22, 2026</small>
+                        </div>
+                        <p class="mb-1">75 Mushaf for parents</p>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Sekolah Dasar Islam</h5>
+                          <small class="text-muted">Apr 25, 2026</small>
+                        </div>
+                        <p class="mb-1">200 Mushaf for students</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Beneficiaries Section -->
+        <section id="beneficiaries" class="section">
+          <div class="container">
+            <h2 class="mb-4">Beneficiaries Management</h2>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Beneficiaries Overview</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="widget" style="text-align: center; border-top: none;">
+                          <div class="widget-icon success" style="margin: 0 auto 15px; width: 60px; height: 60px;">
+                            <i class="fas fa-school"></i>
+                          </div>
+                          <h5>Educational Institutions</h5>
+                          <p class="mb-0">124</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="widget" style="text-align: center; border-top: none;">
+                          <div class="widget-icon primary" style="margin: 0 auto 15px; width: 60px; height: 60px;">
+                            <i class="fas fa-user-graduate"></i>
+                          </div>
+                          <h5>Students Benefited</h5>
+                          <p class="mb-0">2,840</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="widget" style="text-align: center; border-top: none;">
+                          <div class="widget-icon warning" style="margin: 0 auto 15px; width: 60px; height: 60px;">
+                            <i class="fas fa-hands-praying"></i>
+                          </div>
+                          <h5>Parents/Guardians</h5>
+                          <p class="mb-0">1,560</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="widget" style="text-align: center; border-top: none;">
+                          <div class="widget-icon info" style="margin: 0 auto 15px; width: 60px; height: 60px;">
+                            <i class="fas fa-hand-holding-heart"></i>
+                          </div>
+                          <h5>Active Sponsors</h5>
+                          <p class="mb-0">89</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Beneficiaries List</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Institution</th>
+                            <th>Location</th>
+                            <th>Mushaf Received</th>
+                            <th>Last Distribution</th>
+                            <th>Contact Person</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Pesantren Al-Hidayah</td>
+                            <td>Bogor, West Java</td>
+                            <td>420</td>
+                            <td>Apr 10, 2026</td>
+                            <td>Ustadz Ahmad</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Madrasah Taqwa</td>
+                            <td>Bandung, West Java</td>
+                            <td>380</td>
+                            <td>Apr 8, 2026</td>
+                            <td>Ustazah Siti</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Yatim Piantu Sejahtera</td>
+                            <td>Jakarta Selatan</td>
+                            <td>310</td>
+                            <td>Apr 5, 2026</td>
+                            <td>Budi Santoso</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Sekolah Dasar Islam Al-Furqan</td>
+                            <td>Surabaya, East Java</td>
+                            <td>275</td>
+                            <td>Mar 28, 2026</td>
+                            <td>Guru Rahman</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Ponpes Al-Ikhlas</td>
+                            <td>Yogyakarta</td>
+                            <td>190</td>
+                            <td>Mar 20, 2026</td>
+                            <td>Kyai Abdullah</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports" class="section">
+          <div class="container">
+            <h2 class="mb-4">Reports & Analytics</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Monthly Wakaf Trends</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="chart-container">
+                      <!-- Chart Placeholder -->
+                      <div style="height: 100%; background: linear-gradient(to top, #f8f9fa 0%, #e9ecef 100%); display: flex; align-items: center; justify-content: center; color: #666;">
+                        Monthly Donation Chart
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Distribution by Program</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="progress-container mb-3">
+                      <div class="progress-bar" style="width: 55%;"></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Mushaf Personal: 55%</span>
+                      <span>1,562 units</span>
+                    </div>
+                    
+                    <div class="progress-container mb-3">
+                      <div class="progress-bar" style="width: 30%;"></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Hadiah Jariyah: 30%</span>
+                      <span>852 units</span>
+                    </div>
+                    
+                    <div class="progress-container">
+                      <div class="progress-bar" style="width: 15%;"></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Wakaf Kolektif: 15%</span>
+                      <span>426 units</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Financial Summary</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="widget" style="text-align: center; border-top: none;">
+                          <div class="widget-icon success" style="margin: 0 auto 15px; width: 50px; height: 50px;">
+                            <i class="fas fa-dollar-sign"></i>
+                          </div>
+                          <h5>Total Collected</h5>
+                          <p class="mb-0">$124,580</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="widget" style="text-align: center; border-top: none;">
+                          <div class="widget-icon primary" style="margin: 0 auto 15px; width: 50px; height: 50px;">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                          </div>
+                          <h5>Operational Costs</h5>
+                          <p class="mb-0">$12,458 (10%)</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="widget" style="text-align: center; border-top: none;">
+                          <div class="widget-icon warning" style="margin: 0 auto 15px; width: 50px; height: 50px;">
+                            <i class="fas fa-hand-holding-usd"></i>
+                          </div>
+                          <h5>For Distribution</h5>
+                          <p class="mb-0">$112,122 (90%)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="section">
+          <div class="container">
+            <h2 class="mb-4">System Settings</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Organization Profile</div>
+                  </div>
+                  <div class="widget-content">
+                    <form>
+                      <div class="mb-3">
+                        <label for="orgName" class="form-label">Organization Name</label>
+                        <input type="text" class="form-control" id="orgName" value="Yayasan Al-Qur'an Santri (AQSI)">
+                      </div>
+                      <div class="mb-3">
+                        <label for="orgEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="orgEmail" value="info@aqsi.or.id">
+                      </div>
+                      <div class="mb-3">
+                        <label for="orgPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="orgPhone" value="+62 21 XXXX XXXX">
+                      </div>
+                      <div class="mb-3">
+                        <label for="orgAddress" class="form-label">Address</label>
+                        <textarea class="form-control" id="orgAddress" rows="3">Jalan Raya Bogor KM 26, Cibinong, Bogor, West Java 16916</textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary-custom">Save Changes</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">Notification Preferences</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                      <label class="form-check-label" for="emailNotifications">
+                        Email notifications for new wakaf
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" id="smsNotifications" checked>
+                      <label class="form-check-label" for="smsNotifications">
+                        SMS alerts for urgent matters
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" id="monthlyReport" checked>
+                      <label class="form-check-label" for="monthlyReport">
+                        Monthly distribution report
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                      <label class="form-check-label" for="newsletter">
+                        AQSI newsletter subscription
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-outline-emerald">Save Preferences</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <div class="widget">
+                  <div class="widget-header">
+                    <div class="widget-title">System Information</div>
+                  </div>
+                  <div class="widget-content">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <strong>System Version:</strong> 2.1.0
+                        </div>
+                        <div class="mb-3">
+                          <strong>Last Updated:</strong> April 15, 2026
+                        </div>
+                        <div class="mb-3">
+                          <strong>Database Size:</strong> 2.4 GB
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <strong>Active Users:</strong> 12
+                        </div>
+                        <div class="mb-3">
+                          <strong>Storage Used:</strong> 65% of 100 GB
+                        </div>
+                        <div class="mb-3">
+                          <strong>Uptime:</strong> 99.8%
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4">
+                      <button class="btn btn-outline-emerald me-2">Backup Database</button>
+                      <button class="btn btn-outline-emerald">System Logs</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="site-footer bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-7">
+                <h2 class="footer-heading mb-4">Tentang Kami</h2>
+                <p>Yayasan Al-Qur'an Santri (AQSI) merupakan lembaga profesional di bidang pendidikan, sosial, dan keagamaan. Sejak berdiri pada tahun 2017, Yayasan AQSI konsisten menghadirkan program-program yang memberi manfaat nyata bagi masyarakat dan berperan dalam membangun kemaslahatan umat.</p>
+              </div>
+              <div class="col-md-4 ml-auto">
+                <h2 class="footer-heading mb-4">Legalitas</h2>
+                <ul class="list-unstyled">
+                  <li>Keputusan Menkumham AHU-0009981.AH.01.07/2017</li>
+                  <li>NPWP: 82.204.833.6-503.000</li>
+                  <li>Izin BWI: 3.3.00444</li>
+                  <li>Izin PUB: B/4745/460/VII/2024</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ml-auto">
+            <div class="mb-5">
+              <h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>
+              <form action="#" method="post" class="footer-suscribe-form">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control rounded-0 border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <h2 class="footer-heading mb-4">Follow Us</h2>
+            <a href="#" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Al-Qur'an Santri (AQSI). All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // Simple sidebar toggle for mobile
+    $(document).ready(function() {
+      $('.site-menu-toggle').click(function(e) {
+        e.preventDefault();
+        $('.site-mobile-menu-body').toggleClass('show');
+      });
+    });
+
+    // Active sidebar item based on URL (simplified)
+    $(document).ready(function() {
+      var path = window.location.pathname;
+      var page = path.split("/").pop();
+      $('.sidebar .nav-link[href="' + page + '"]').addClass('active');
+    });
+  </script>
+</body>
+
+</html>
