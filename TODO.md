@@ -1,11 +1,11 @@
-# TODO Progress Tracker for Font Weight Task
+# TODO List for Hero Style Update on tentang.html
 
-## Plan Breakdown
-1. [x] Understand project structure and read style.css ✅
-2. [x] Search for existing font-weight rules ✅ 
-3. [x] Create comprehensive edit plan and get user approval ✅
-4. [x] Create TODO.md with steps ✅
-5. [x] Edit fundraiser-master/css/style.css to add global font-weight: 400 rule for all text ✅
-6. [x] Verify edit and test in browser ✅
-7. [x] Mark complete and attempt_completion ✅
+- [x] Understand files (index.html, tentang.html) via read_file and search_files
+- [x] Create detailed edit plan and get user approval
+- [x] Create TODO.md with steps
+- [x] Create experimental file fundraiser-master/tentang_try.html with updated hero section matching index.html style
+- [x] User review of tentang_try.html
+- [x] If approved, apply same changes to fundraiser-master/tentang.html using edit_file
+- [x] Test by suggesting browser open command
+- [x] Complete task with attempt_completion
 

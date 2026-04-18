@@ -37,16 +37,16 @@
       <div class="site-mobile-menu-body"></div>
     </div>
 
-    <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
+     <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
 
       <div class="container">
         <div class="row align-items-center position-relative">
 
-          <div class="site-logo">
-            <img src="images2/LOGO-AQSI.png" alt="AQSI" class="text-white site-logo"></a>
-          </div>
+<div class="site-logo">
+             <a href="index.html"><img src="images2/LOGO-AQSI.png" alt="AQSI" class="site-logo"></a>
+           </div>
 
-          <nav class="site-navigation text-left ml-auto " role="navigation">
+          <nav class="site-navigation text-light ml-auto " role="navigation">
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
               <li><a href="index.html" class="nav-link">Home</a></li>
               <li><a href="tentang.html" class="nav-link">Tentang</a></li>
@@ -57,23 +57,19 @@
             </ul>
           </nav>
 
-          <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-white"><span class="icon-menu h3 text-white"></span></a></div>
+          <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle"><span class="icon-menu h3"></span></a></div>
 
         </div>
       </div>
 
     </header>
 
-    <div class="owl-carousel-wrapper">
-
-      <div class="box-92819">
-        <h1 class="text-white mb-3">Form Wakaf Al-Qur'an</h1>
-        <p class="lead text-white">Tunaikan Amanah Anda, Raih Pahala Jariyah Tanpa Batas</p>
-      </div>
-
-      <div class="ftco-cover-1 overlay" style="background-image: url('images2/wakaf%20al%20Qur%27an%20untuk%20Santri.webp');"></div>
-
-    </div>
+<div class="ftco-cover-1 overlay" style="background-image: url('images2/wakaf%20al%20Qur%27an%20untuk%20Santri.webp'); background-color: rgba(0,0,0,0.6); background-blend-mode: multiply;">
+  <div class="box-92819">
+    <h1 class="mb-3 text-white" style="font-size: 3.5rem;">Form Wakaf Al-Qur'an</h1>
+    <p class="lead text-white">Tunaikan Amanah Anda, Raih Pahala Jariyah Tanpa Batas</p>
+  </div>
+</div>
 
     <div class="site-section">
       <div class="container">
@@ -82,51 +78,51 @@
           <p class="mb-4">Kami menyediakan tiga pilihan program wakaf yang dapat disesuaikan dengan kebutuhan dan niat Anda. Setiap program dirancang untuk memberikan dampak maksimal bagi para santri penghafal Al-Qur'an di pelosok nusantara.</p>
         </div>
 
-        <!-- Wakaf Options Cards -->
-        <div class="row mb-5">
-          <!-- Option 1 -->
-          <div class="col-md-4 mb-4">
-            <div class="bg-light p-4 rounded h-100">
-              <div class="mb-3">
-                <i class="fas fa-book-open fa-3x text-primary"></i>
-              </div>
-              <h4 class="mb-3">Wakaf Mushaf Personal</h4>
-              <p class="mb-4">Berikan dukungan fasilitas mengaji yang layak untuk satu pejuang Al-Qur'an. Masih banyak santri yang harus bergantian menggunakan mushaf robek.</p>
-              <button class="btn btn-primary" onclick="selectProgram('personal')">Pilih Program</button>
-            </div>
-          </div>
+         <!-- Wakaf Options Cards -->
+         <div class="row mb-5">
+           <!-- Option 1 -->
+           <div class="col-md-4 mb-4">
+             <div class="program-card">
+                <div class="img-wrap mb-4">
+                  <img src="fontawesome-free-7.2.0-desktop/svgs/solid/book-quran.svg" alt="Quran">
+                </div>
+               <h3>Wakaf Mushaf Personal</h3>
+               <p>Berikan dukungan fasilitas mengaji yang layak untuk satu pejuang Al-Qur'an. Masih banyak santri yang harus bergantian menggunakan mushaf robek.</p>
+               <button class="btn btn-primary" onclick="selectProgram('personal')">Pilih Program</button>
+             </div>
+           </div>
 
-          <!-- Option 2 -->
-          <div class="col-md-4 mb-4">
-            <div class="bg-light p-4 rounded h-100">
-              <div class="mb-3">
-                <i class="fas fa-heart fa-3x text-danger"></i>
-              </div>
-              <h4 class="mb-3">Hadiah Jariyah Orang Tua</h4>
-              <p class="mb-4">Kirimkan pahala terbaik untuk Ayah dan Ibu tercinta. Wakafkan mushaf baru atas nama mereka sebagai bukti cinta yang tak terputus.</p>
-              <button class="btn btn-primary" onclick="selectProgram('parent')">Pilih Program</button>
-            </div>
-          </div>
+           <!-- Option 2 -->
+           <div class="col-md-4 mb-4">
+             <div class="program-card">
+                <div class="img-wrap mb-4">
+                  <img src="fontawesome-free-7.2.0-desktop/svgs/solid/praying-hands.svg" alt="Praying Hands">
+                </div>
+               <h3>Hadiah Jariyah Orang Tua</h3>
+               <p>Kirimkan pahala terbaik untuk Ayah dan Ibu tercinta. Wakafkan mushaf baru atas nama mereka sebagai bukti cinta yang tak terputus.</p>
+               <button class="btn btn-primary" onclick="selectProgram('parent')">Pilih Program</button>
+             </div>
+           </div>
 
-          <!-- Option 3 -->
-          <div class="col-md-4 mb-4">
-            <div class="bg-light p-4 rounded h-100">
-              <div class="mb-3">
-                <i class="fas fa-users fa-3x" style="color: #27ae60;"></i>
-              </div>
-              <h4 class="mb-3">Wakaf Kolektif Institusi</h4>
-              <p class="mb-4">Penuhi kebutuhan ketersediaan Al-Qur'an di asrama atau rumah tahfidz pelosok untuk memastikan setiap santri memiliki mushaf pribadi.</p>
-              <button class="btn btn-primary" onclick="selectProgram('collective')">Pilih Program</button>
-            </div>
-          </div>
-        </div>
+           <!-- Option 3 -->
+           <div class="col-md-4 mb-4">
+             <div class="program-card">
+                <div class="img-wrap mb-4">
+                  <img src="fontawesome-free-7.2.0-desktop/svgs/solid/mosque.svg" alt="Mosque">
+                </div>
+               <h3>Wakaf Kolektif Institusi</h3>
+               <p>Penuhi kebutuhan ketersediaan Al-Qur'an di asrama atau rumah tahfidz pelosok untuk memastikan setiap santri memiliki mushaf pribadi.</p>
+               <button class="btn btn-primary" onclick="selectProgram('collective')">Pilih Program</button>
+             </div>
+           </div>
+         </div>
 
         <!-- Form Section -->
         <div id="formSection" style="display: none;">
           <div class="row">
-            <div class="col-lg-8 mb-5">
-              <h3 class="mb-4">Data Wakaf</h3>
-              <form action="thankyou.html?dashboard=true" method="get" id="wakafForm">
+             <div class="col-lg-8 mb-5">
+               <h3 class="mb-4">Data Wakaf</h3>
+               <form action="thankyou.html?dashboard=true" method="get" id="wakafForm" class="bg-white p-4 p-md-5 rounded shadow-sm">
                 
                 <!-- Program Type (Hidden) -->
                 <input type="hidden" id="programType" name="programType" value="">
@@ -262,10 +258,10 @@
                 <!-- Buttons -->
                 <div class="form-group row">
                   <div class="col-md-6">
-                    <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5 rounded-0" value="Lanjut ke Pembayaran">
+                    <input type="submit" class="btn btn-block btn-outline-primary py-3 px-5 rounded-0" value="Lanjut ke Pembayaran">
                   </div>
                   <div class="col-md-6">
-                    <button type="button" class="btn btn-block btn-secondary text-white py-3 px-5 rounded-0" onclick="resetForm()">Kembali ke Pilihan Program</button>
+                    <button type="button" class="btn btn-block btn-outline-secondary py-3 px-5 rounded-0" onclick="resetForm()">Kembali ke Pilihan Program</button>
                   </div>
                 </div>
               </form>
@@ -335,7 +331,7 @@
       </div>
     </div>
 
-    <footer class="site-footer bg-white">
+    <footer class="site-footer bg-white" style="box-shadow: 0 -5px 10px rgba(128,128,128,0.3);">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -363,9 +359,9 @@
               <h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>
               <form action="#" method="post" class="footer-suscribe-form">
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control rounded-0 border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                  <input type="text" class="form-control rounded-0 border-secondary" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
                   <div class="input-group-append">
-                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>
+                    <button class="btn btn-outline-primary" type="button" id="button-addon2">Subscribe</button>
                   </div>
                 </div>
             </div>
