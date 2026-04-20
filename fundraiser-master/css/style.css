@@ -21,7 +21,7 @@
 }
 
 .bg-secondary {
-  background-color: #1a1a1a !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
 .text-primary {
@@ -46,6 +46,9 @@ html {
   .owl-carousel-wrapper .box-92819 {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+  }
+  .owl-carousel-wrapper .box-92819 h1 {
+    margin-top: 50px !important;
   }
 }
 
