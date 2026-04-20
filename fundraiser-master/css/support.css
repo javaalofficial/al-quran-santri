@@ -762,10 +762,10 @@ h1, h2, h3, h4, h5,
       color: rgba(0, 0, 0, 0.7) !important; }
       .sticky-wrapper .site-navbar ul li a.active {
         color: #000 !important; }
-  .sticky-wrapper.is-sticky .site-navbar {
-    background: #1a1a1a;
-    -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
-    box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2); }
+   .sticky-wrapper.is-sticky .site-navbar {
+     background: rgba(0,0,0,0.9);
+     -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
+     box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2); }
     .sticky-wrapper.is-sticky .site-navbar .site-logo a {
       color: #fff; }
     .sticky-wrapper.is-sticky .site-navbar ul li a {
