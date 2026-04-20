@@ -4,7 +4,7 @@ html {
   overflow-x: hidden; 
 }
 
-/* Ensure all text has minimum font-weight 400 as requested */
+/* Font Weight Reset - SINGLE INSTANCE */
 *, *::before, *::after {
   font-weight: 400 !important;
 }
@@ -66,7 +66,7 @@ strong, b,
 }
 
 .program-card h3 a:hover {
-  color: #00a651;
+  color: #10b981;
 }
 
 .program-card p {
@@ -114,15 +114,12 @@ strong, b,
 
 /* Existing styles continue... [all previous style.css content preserved below] */
 
-/* Paste all original style.css content here to make COMPLETE file */
 .font-size-10 { font-size: 10px; }
-/* Original CSS styles */
 
-/* End custom styles */
-
-/* Ensure all text has minimum font-weight 400 as requested */
-*, *::before, *::after {
-  font-weight: 400 !important;
+/* ========== ADD FOOTER STYLING HERE ========== */
+.site-footer {
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1) !important;
+  border-top: 1px solid rgba(0,0,0,0.06) !important;
 }
 
 /* Override for headings and bold elements to preserve hierarchy */

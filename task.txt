@@ -1,0 +1,16 @@
+ baca dan pahami seluruh file, Ubah semua warna disini menjadi bertema donasi dengan warna dominan hijau zamrud, pada footer berikan box shadow sehingga dapat dibedakan dengan seksi lainnya, tes  semua link dan pastikan semua link mengarah pada tempat seharusnya, pada link dari blog yang berasal dari teks "baca selangkapnya" hilangkan semua headernya agar lebih mirip landing page juga pada bagian isi masing masing ubah agar lebih mendekati artikel dibandingkan copywriting(jadi hasilnya lebih ke memberitahu dibanding mengajak dan berarti hilangkan ajakan AYO BERDONASI atau semacam itu) dan jangan lupa ketika di klik target_blank agar terbuka di tab baru, perbaiki seluruh indentasi dari kodeku agar lebih mudah dibaca, hilangkan pilihan konfirmasi yang mengarah ke konfirmasi.html dari seluruh header, konfirmasi.html jadikan redirect dari form setelah diisi dan jangan lupa tambahkan ucapan terima kasih pada konfirmasi.html, konsisten background-color pada background-color: rgba(0,0,0,0.5); kalau sampai ada yang nilai alphanya lebih tinggi atau lebih rendah sesuaikan menjadi 0.5, jangan lupa untuk mengikuti SEO dalam perubahan ini, berika semantik pada tempatnya, perbaiki peletakan gambar agar lebih merata, pada icon baca pada semua file dan ambil iconnya dari C:\Users\user\Documents\al-quran-santri\fundraiser-master\fontawesome-free-7.2.0-desktop\svgs , dan ubah nama ooo.css menjadi support.css dan ubah link yang mengarah ke ooo.css menjadi ke support.css  . 
+pada(
+01
+Distribusi Merata
+Menjangkau pesantren yang jarang tersentuh bantuan. Kami Berdedikasi tinggi agar setiap donasi mushaf yang telah diamanahkan kepada kami dapat dirasakan secara merata ke seluruh daerah.
+
+02
+Laporan Berkala
+Donatur mendapatkan bukti foto penyaluran dan dapat melihat laporan penyaluran secara realtime dan terupdate. Kami menyediakan laporan spreadsheet yang dapat dilihat langsung bagaimana masuk dan keluarnya donasi dari para donatur.
+
+03
+Doa Bersama
+Setiap penyaluran disertai doa santri untuk para donatur. Setiap al Qur'an yang diwakafkan memiliki nama didalamnya yang akan didoakan oleh para santri bersama sama setiap harinya.
+)
+tambahkan yang 04 yang berisi tentang legalitas asli agar orang percaya
+ 
