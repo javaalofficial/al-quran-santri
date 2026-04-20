@@ -1,6 +1,3 @@
-/* Base styles from previous - keeping existing + new program fixes */
-
-/* EMERALD GREEN THEME OVERRIDES (HIJAU ZAMRUD) */
 :root {
   --primary: #10b981 !important;
   --primary-dark: #059669 !important;
@@ -37,6 +34,19 @@
 
 html {
   overflow-x: hidden; 
+}
+
+/* Mobile hero spacing fix */
+@media (max-width: 991.98px) {
+  .owl-carousel-wrapper {
+    padding-top: 80px !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .owl-carousel-wrapper .box-92819 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 /* Font Weight Reset - SINGLE INSTANCE */
