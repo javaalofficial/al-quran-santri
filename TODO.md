@@ -1,30 +1,27 @@
-# Al-Quran Santri - Fix Header Links & program.html Styles
-✅ Plan approved by user
+# LCP Mobile Optimization - BLACKBOXAI Plan
 
-## Implementation Steps:
+## Approved Steps (Status)
 
-### 1. **FIX BROKEN TENTANG LINKS** `✅ COMPLETED`
-- ✅ index.html: `pages/tentang.html` → `tentang.html`
-- ✅ program.html: `pages/tentang.html` → `tentang.html`  
-- ✅ blog.html: `pages/tentang.html` → `tentang.html`
-- ✅ konfirmasi.html: `pages/tentang.html` → `tentang.html`
-- ✅ pages/form.html: `pages/tentang.html` → `../tentang.html`
-- [ ] Other files via search_files verification
+### 1. Create/Update TODO tracking [✅ COMPLETE]
+### 2. Fix font-display: swap in CSS files [✅ COMPLETE - icomoon, flaticon1, support.css]
+### 3. Inline critical CSS + Preload hero resources [✅ COMPLETE]
+### 4. Convert hero carousel to optimized <img> LCP [PENDING]
+### 5. Defer non-critical JS/CSS [PENDING]
+### 6. Test PageSpeed Insights Mobile [PENDING]
+### 7. Image optimization (images2/) [PENDING]
+### 8. Final verification + completion [PENDING]
 
-### 2. **FIX program.html STYLES** 
-- [ ] Enhance .program-card CSS (specificity/hover)
-- [ ] Fix form section toggles (#formSection display:block styling)
-- [ ] Responsive cards/media queries
-- [ ] Button hovers/validation styling
+**Current Progress: Font Optimization**
+**Next: Hero preload + critical CSS**
 
-### 3. **TEST & VERIFY**
-- [ ] Open index.html → click Tentang ✅
-- [ ] program.html: Cards hover + form toggle works
-- [ ] All nav consistent
+### 2. Inline critical CSS + Preload hero resources [PENDING]
+### 3. Fix font-display: swap in CSS files [PENDING]  
+### 4. Convert hero carousel to optimized <img> LCP [PENDING]
+### 5. Defer non-critical JS/CSS [PENDING]
+### 6. Test PageSpeed Insights Mobile [PENDING]
+### 7. Image optimization (images2/) [PENDING]
+### 8. Final verification + completion [PENDING]
 
-### 4. **FINALIZE**
-- [ ] Update TODO.md ✅
-- [ ] attempt_completion
-
-**Next:** Execute link replacements → style fixes → browser test
+**Current Progress: Planning Phase Complete**
+**Next: Await user approval to execute edits**
 
