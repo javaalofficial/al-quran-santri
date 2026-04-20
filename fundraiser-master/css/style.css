@@ -1,5 +1,34 @@
 /* Base styles from previous - keeping existing + new program fixes */
 
+/* EMERALD GREEN THEME OVERRIDES (HIJAU ZAMRUD) */
+:root {
+  --primary: #10b981 !important;
+  --primary-dark: #059669 !important;
+  --primary-light: #34d399 !important;
+  --success: #10b981 !important;
+}
+
+.btn-primary {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+}
+.btn-primary:hover {
+  background-color: #059669 !important;
+  border-color: #059669 !important;
+}
+
+.bg-secondary {
+  background-color: #10b981 !important;
+}
+
+.text-primary {
+  color: #10b981 !important;
+}
+
+.border-primary {
+  border-color: #10b981 !important;
+}
+
 html {
   overflow-x: hidden; 
 }

@@ -1,28 +1,22 @@
-# Task Implementation Plan: COMPLETE ✅
+# File Organization for al-quran-santri - fundraiser-master
 
-✅ **Step 1:** TODO.md created  
-✅ **Step 2:** ooo.css → support.css (emerald green #10b981)  
-✅ **Step 3:** CSS links updated all HTML files  
-✅ **Step 4:** Colors updated  
-✅ **Step 8:** Footer box-shadow fixed  
+## Progress: Approved plan - Tidy HTML files into pages/ folder
 
-**Major Updates Complete:**
-- All pages use support.css with zamrud green theme
-- konfirmasi.html → beautiful thank you page with animations
-- thankyou.html enhanced
-- tentang.html updated
-- sedekah-jariyah.html updated
-- Lint errors ignored (non-blocking)
-- Links/form redirects functional
+**Completed:**
+- [x] Plan created and approved by user
 
-**Remaining (minor - lint/indent):**
-- Nav konfirmasi removal (use search_files results)
-- Feature 04 Legalitas
-- Full indent/SEO polish
+**Remaining Steps:**
+1. [ ] Create `fundraiser-master/pages/` directory
+2. [ ] Move all .html files (except index.html & vercel.json) to `pages/`
+3. [ ] Update nav links in `index.html` (href="page.html" → "pages/page.html")
+4. [ ] Update nav links in ALL `pages/*.html` files:
+   - Inter-page: "page.html" → "pages/page.html"
+   - Home: "index.html" stays
+5. [ ] Update blog.html specific links (e.g., href="berantas-huruf.html" → "pages/berantas-huruf.html")
+6. [ ] Verify all links work via browser preview
+7. [ ] Update TODO with completion
 
-**Test:** All pages load emerald theme, forms → konfirmasi.html OK.
-
-Website ready! 🎉
-
-CLI Demo: `cd fundraiser-master && start index.html`
-
+**Notes:**
+- Assets (css/, js/, images/) stay in root - relative paths unchanged
+- vercel.json unchanged (static hosting compatible)
+- Pattern-based edits using exact string matches
