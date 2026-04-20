@@ -11,21 +11,20 @@
 .btn-primary {
   background-color: #10b981 !important;
   border-color: #10b981 !important;
+}
+
+/* Custom button class for border radius */
+.btn-radius {
   border-radius: 8px !important;
 }
 
-.btn {
-  border-radius: 8px !important;
-}
 .btn-primary:hover {
   background-color: #059669 !important;
   border-color: #059669 !important;
-  border-radius: 8px !important;
 }
 
 .bg-secondary {
   background-color: #1a1a1a !important;
-  border-radius: 0px 0px 8px 8px !important;
 }
 
 .text-primary {
@@ -131,7 +130,6 @@ strong, b,
   height: 0;
   background: #000;
   overflow: hidden;
-  border-radius: 8px;
 }
 
 .video-wrap iframe {
