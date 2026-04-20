@@ -1,22 +1,30 @@
-# File Organization for al-quran-santri - fundraiser-master
+# Al-Quran Santri - Fix Header Links & program.html Styles
+✅ Plan approved by user
 
-## Progress: Approved plan - Tidy HTML files into pages/ folder
+## Implementation Steps:
 
-**Completed:**
-- [x] Plan created and approved by user
+### 1. **FIX BROKEN TENTANG LINKS** `✅ COMPLETED`
+- ✅ index.html: `pages/tentang.html` → `tentang.html`
+- ✅ program.html: `pages/tentang.html` → `tentang.html`  
+- ✅ blog.html: `pages/tentang.html` → `tentang.html`
+- ✅ konfirmasi.html: `pages/tentang.html` → `tentang.html`
+- ✅ pages/form.html: `pages/tentang.html` → `../tentang.html`
+- [ ] Other files via search_files verification
 
-**Remaining Steps:**
-1. [ ] Create `fundraiser-master/pages/` directory
-2. [ ] Move all .html files (except index.html & vercel.json) to `pages/`
-3. [ ] Update nav links in `index.html` (href="page.html" → "pages/page.html")
-4. [ ] Update nav links in ALL `pages/*.html` files:
-   - Inter-page: "page.html" → "pages/page.html"
-   - Home: "index.html" stays
-5. [ ] Update blog.html specific links (e.g., href="berantas-huruf.html" → "pages/berantas-huruf.html")
-6. [ ] Verify all links work via browser preview
-7. [ ] Update TODO with completion
+### 2. **FIX program.html STYLES** 
+- [ ] Enhance .program-card CSS (specificity/hover)
+- [ ] Fix form section toggles (#formSection display:block styling)
+- [ ] Responsive cards/media queries
+- [ ] Button hovers/validation styling
 
-**Notes:**
-- Assets (css/, js/, images/) stay in root - relative paths unchanged
-- vercel.json unchanged (static hosting compatible)
-- Pattern-based edits using exact string matches
+### 3. **TEST & VERIFY**
+- [ ] Open index.html → click Tentang ✅
+- [ ] program.html: Cards hover + form toggle works
+- [ ] All nav consistent
+
+### 4. **FINALIZE**
+- [ ] Update TODO.md ✅
+- [ ] attempt_completion
+
+**Next:** Execute link replacements → style fixes → browser test
+

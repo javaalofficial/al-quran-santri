@@ -763,13 +763,13 @@ h1, h2, h3, h4, h5,
       .sticky-wrapper .site-navbar ul li a.active {
         color: #000 !important; }
   .sticky-wrapper.is-sticky .site-navbar {
-    background: #fff;
+    background: #1a1a1a;
     -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
     box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2); }
     .sticky-wrapper.is-sticky .site-navbar .site-logo a {
-      color: #10b981; }
+      color: #fff; }
     .sticky-wrapper.is-sticky .site-navbar ul li a {
-      color: #000 !important; }
+      color: #fff !important; }
       .sticky-wrapper.is-sticky .site-navbar ul li a.active {
         color: #10b981 !important; }
   .sticky-wrapper .shrink {
@@ -1182,7 +1182,8 @@ h1, h2, h3, h4, h5,
   background-size: cover; }
 
 .btn-md {
-  padding: 8px 20px; }
+  padding: 8px 20px;
+  border-radius: 8px !important; }
 
 .border-w-2 {
   border-width: 2px !important; }
