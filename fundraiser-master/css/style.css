@@ -5,6 +5,16 @@
   --success: #10b981 !important;
 }
 
+/* Font Families */
+body, p, span, div, label, input, textarea, button, a {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+}
+
 .btn-primary {
   background-color: #10b981 !important;
   border-color: #10b981 !important;
@@ -53,7 +63,7 @@ html {
 }
 
 /* Font Weight Reset - SINGLE INSTANCE */
-*, *::before, *::after {
+*:not(.font-override):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(strong):not(b):not([class*="bold"]):not(.font-weight-bold):not(.font-weight-bolder), *::before:not(.font-override), *::after:not(.font-override) {
   font-weight: 400 !important;
 }
 
@@ -64,6 +74,11 @@ strong, b,
 .font-weight-bold,
 .font-weight-bolder {
   font-weight: inherit !important;
+}
+
+/* Playfair Display for text-cursive elements */
+.text-cursive {
+  font-family: 'Playfair Display', serif !important;
 }
 
 /* Original styles preserved */

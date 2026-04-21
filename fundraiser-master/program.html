@@ -7,7 +7,7 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="fonts/icomoon/style.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -65,7 +65,7 @@
 
 <div class="ftco-cover-1 overlay" style="background-image: url('images2/wakaf%20al%20Qur%27an%20untuk%20Santri.webp'); background-color: rgba(0,0,0,0.5); background-blend-mode: multiply;">
   <div class="box-92819" style="min-width: 300px !important;">
-    <h1 class="mb-3 text-white" style="font-size: 3.5rem; font-family: 'Montserrat', sans-serif; font-weight: 700;">Form Wakaf Al-Qur'an</h1>
+    <h1 class="mb-3 text-white text-cursive" style="font-size: 3.5rem; font-weight: 700;">Form Wakaf Al-Qur'an</h1>
     <p class="lead text-white">Tunaikan Amanah Anda, Raih Pahala Jariyah Tanpa Batas</p>
   </div>
 </div>
@@ -121,7 +121,7 @@
           <div class="row">
              <div class="col-lg-8 mb-5">
                <h3 class="mb-4">Data Wakaf</h3>
-                <form action="konfirmasi.html" method="get" id="wakafForm" class="bg-white p-4 p-md-5 rounded shadow-sm">
+<form action="" method="post" id="wakafForm" class="bg-white p-4 p-md-5 rounded shadow-sm" onsubmit="return submitForm(event)">
                 
                 <!-- Program Type (Hidden) -->
                 <input type="hidden" id="programType" name="programType" value="">
@@ -452,6 +452,45 @@
         document.getElementById('customAmountSection').style.display = 'none';
       }
     });
+
+  // NEW: Google Sheets Form Submit
+  function submitForm(event) {
+    event.preventDefault();
+
+    // Show loading
+    const submitBtn = event.target.querySelector('input[type="submit"]');
+    const originalValue = submitBtn.value;
+    submitBtn.value = 'Mengirim...';
+    submitBtn.disabled = true;
+
+    // Collect form data
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    // Fetch to Google Apps Script
+    fetch('https://script.google.com/macros/s/AKfycbyLI52IraMgy0V_Q5Xl5no2Jf5RkObkLNvsMfkUDphE0Ce5ePabUBlGQzHmlEYpVQrg/exec', {
+      method: 'POST',
+      mode: 'no-cors', // Required for GAS
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+    .then(() => {
+      // Success - redirect with query params
+      const params = new URLSearchParams(data).toString();
+      window.location.href = 'konfirmasi.html?' + params;
+    })
+    .catch((error) => {
+      alert('Error submitting form: ' + error.message + '. Please try again.');
+    })
+    .finally(() => {
+      submitBtn.value = originalValue;
+      submitBtn.disabled = false;
+    });
+
+    return false;
+  }
   </script>
 
 </body>

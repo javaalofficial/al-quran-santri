@@ -1646,9 +1646,9 @@ h1, h2, h3, h4, h5,
     font-weight: 900 !important;
     font-size: 5rem;
     font-family: "Mansalva", cursive !important; }
-
 .text-cursive {
-  font-family: "Mansalva", cursive !important; }
+  font-family: 'Poppins', sans-serif !important;
+}
 
 .media-02819 {
   margin-bottom: 60px; }

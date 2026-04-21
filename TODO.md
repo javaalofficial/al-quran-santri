@@ -1,27 +1,26 @@
-# LCP Mobile Optimization - BLACKBOXAI Plan
+# TODO: Integrate Form to Google Sheets
 
-## Approved Steps (Status)
+## Completed
+- [x] Create TODO.md
+- [x] Edit form.html with Google Sheets integration
+- [x] Edit program.html with Google Sheets integration
 
-### 1. Create/Update TODO tracking [✅ COMPLETE]
-### 2. Fix font-display: swap in CSS files [✅ COMPLETE - icomoon, flaticon1, support.css]
-### 3. Inline critical CSS + Preload hero resources [✅ COMPLETE]
-### 4. Convert hero carousel to optimized <img> LCP [PENDING]
-### 5. Defer non-critical JS/CSS [PENDING]
-### 6. Test PageSpeed Insights Mobile [PENDING]
-### 7. Image optimization (images2/) [PENDING]
-### 8. Final verification + completion [PENDING]
+## Remaining
+1. **Test Form Submission**:
+   - Fill form in `form.html` or `program.html`.
+   - Submit → Check your Google Sheet for new row (with timestamp + all fields).
+   - Verify redirect to konfirmasi.html/thankyou.html works.
 
-**Current Progress: Font Optimization**
-**Next: Hero preload + critical CSS**
+2. **Deploy & Live Test** (if using Vercel):
+   ```
+   cd fundraiser-master
+   vercel --prod
+   ```
+   Test live form.
 
-### 2. Inline critical CSS + Preload hero resources [PENDING]
-### 3. Fix font-display: swap in CSS files [PENDING]  
-### 4. Convert hero carousel to optimized <img> LCP [PENDING]
-### 5. Defer non-critical JS/CSS [PENDING]
-### 6. Test PageSpeed Insights Mobile [PENDING]
-### 7. Image optimization (images2/) [PENDING]
-### 8. Final verification + completion [PENDING]
+3. **Optional Improvements**:
+   - Add email notifications in GAS `doPost`.
+   - Customize Sheet columns to match fields.
+   - Add form validation enhancements.
 
-**Current Progress: Planning Phase Complete**
-**Next: Await user approval to execute edits**
-
+Task complete when Sheets receive data automatically!

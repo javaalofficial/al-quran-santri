@@ -3,7 +3,8 @@
 
 <head>
   <title>Form Wakaf &mdash; Al Qur'an Santri (AQSI)</title>
-  <meta charset="utf-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="images2/LOGO-AQSI.png">
+  <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -175,7 +176,7 @@
           <div class="row">
             <div class="col-lg-8 mb-5">
               <h3 class="mb-4">Data Wakaf</h3>
-              <form action="thankyou.html?dashboard=true" method="get" id="wakafForm" class="bg-white p-4 p-md-5 rounded shadow-sm">
+<form action="" method="post" id="wakafForm" class="bg-white p-4 p-md-5 rounded shadow-sm" onsubmit="return submitForm(event)">
 
                 <!-- Program Type (Hidden) -->
                 <input type="hidden" id="programType" name="programType" value="">
@@ -484,6 +485,45 @@
         document.getElementById('customAmountSection').style.display = 'none';
       }
     });
+
+  // NEW: Google Sheets Form Submit
+  function submitForm(event) {
+    event.preventDefault();
+
+    // Show loading
+    const submitBtn = event.target.querySelector('input[type="submit"]');
+    const originalValue = submitBtn.value;
+    submitBtn.value = 'Mengirim...';
+    submitBtn.disabled = true;
+
+    // Collect form data
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    // Fetch to Google Apps Script
+    fetch('https://script.google.com/macros/s/AKfycbyLI52IraMgy0V_Q5Xl5no2Jf5RkObkLNvsMfkUDphE0Ce5ePabUBlGQzHmlEYpVQrg/exec', {
+      method: 'POST',
+      mode: 'no-cors', // Required for GAS
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+    .then(() => {
+      // Success - redirect with query params
+      const params = new URLSearchParams(data).toString();
+      window.location.href = 'thankyou.html?' + params;
+    })
+    .catch((error) => {
+      alert('Error submitting form: ' + error.message + '. Please try again.');
+    })
+    .finally(() => {
+      submitBtn.value = originalValue;
+      submitBtn.disabled = false;
+    });
+
+    return false;
+  }
   </script>
 
 </body>
