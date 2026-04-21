@@ -470,11 +470,7 @@
     // Fetch to Google Apps Script
     fetch('https://script.google.com/macros/s/AKfycbyLI52IraMgy0V_Q5Xl5no2Jf5RkObkLNvsMfkUDphE0Ce5ePabUBlGQzHmlEYpVQrg/exec', {
       method: 'POST',
-      mode: 'no-cors', // Required for GAS
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
-      }
+      body: new URLSearchParams(data).toString()
     })
     .then(() => {
       // Success - redirect with query params
