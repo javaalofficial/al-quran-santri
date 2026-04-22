@@ -501,9 +501,9 @@
     const data = Object.fromEntries(formData.entries());
 
     // Fetch to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbyLI52IraMgy0V_Q5Xl5no2Jf5RkObkLNvsMfkUDphE0Ce5ePabUBlGQzHmlEYpVQrg/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwUNStyjYNMte0EHr_fgQaWzuIfvq13T70sNKCy7wU36nMPdqvwcxBrkjr2BFTflswvjA/exec', {
       method: 'POST',
-      body: new URLSearchParams(data).toString()
+      body: JSON.stringify(data)
     })
     .then(() => {
       // Success - redirect with query params
