@@ -452,100 +452,117 @@
   <script src="js/main.js"></script>
 
   <script>
-    function selectProgram(program) {
-      document.getElementById('programType').value = program;
+  // ⬇️ PASTE URL GOOGLE APPS SCRIPT KAMU DI SINI
+  // Contoh: https://script.google.com/macros/s/AKfyc.../exec
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz9scRTTkomaKXCwZTjhhpXvNvGIOWklbo54AvrEN1TcX_3RF_PqpN2j7NLdzghoFrn/exec";
 
-      // Hide all sections
-      document.getElementById('personalSection').style.display = 'none';
-      document.getElementById('parentSection').style.display = 'none';
-      document.getElementById('collectiveSection').style.display = 'none';
+  // ──────────────────────────────────────────────
+  // Pilih program → tampilkan form
+  // ──────────────────────────────────────────────
+  function selectProgram(program) {
+    document.getElementById('programType').value = program;
 
-      // Show selected section
-      if (program === 'personal') {
-        document.getElementById('personalSection').style.display = 'block';
-      } else if (program === 'parent') {
-        document.getElementById('parentSection').style.display = 'block';
-      } else if (program === 'collective') {
-        document.getElementById('collectiveSection').style.display = 'block';
-      }
-
-      // Show form section and scroll to it
-      document.getElementById('formSection').style.display = 'block';
-      document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function resetForm() {
-      document.getElementById('wakafForm').reset();
-      document.getElementById('formSection').style.display = 'none';
-      document.getElementById('programType').value = '';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Show custom amount field when custom option is selected
-    document.getElementById('donationAmount').addEventListener('change', function() {
-      if (this.value === 'custom') {
-        document.getElementById('customAmountSection').style.display = 'block';
-      } else {
-        document.getElementById('customAmountSection').style.display = 'none';
-      }
+    ['personalSection', 'parentSection', 'collectiveSection'].forEach(id => {
+      document.getElementById(id).style.display = 'none';
     });
 
-  // NEW: Google Sheets Form Submit dengan CORS-friendly approach
+    const map = {
+      personal:   'personalSection',
+      parent:     'parentSection',
+      collective: 'collectiveSection'
+    };
+    if (map[program]) {
+      document.getElementById(map[program]).style.display = 'block';
+    }
+
+    document.getElementById('formSection').style.display = 'block';
+    setTimeout(() => {
+      document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }
+
+  // ──────────────────────────────────────────────
+  // Reset form
+  // ──────────────────────────────────────────────
+  function resetForm() {
+    document.getElementById('wakafForm').reset();
+    document.getElementById('formSection').style.display = 'none';
+    document.getElementById('programType').value = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ──────────────────────────────────────────────
+  // Tombol custom amount
+  // ──────────────────────────────────────────────
+  document.getElementById('donationAmount').addEventListener('change', function () {
+    document.getElementById('customAmountSection').style.display =
+      this.value === 'custom' ? 'block' : 'none';
+  });
+
+  // ──────────────────────────────────────────────
+  // SUBMIT FORM → Google Apps Script
+  // ──────────────────────────────────────────────
   function submitForm(event) {
     event.preventDefault();
 
+    // Validasi: pastikan URL sudah diganti
+    if (!SCRIPT_URL || SCRIPT_URL.includes("GANTI")) {
+      alert("⚠️ Mohon isi SCRIPT_URL terlebih dahulu di kode form.html");
+      return false;
+    }
+
     const submitBtn = event.target.querySelector('input[type="submit"]');
     const originalValue = submitBtn.value;
-    submitBtn.value = 'Mengirim...';
+    submitBtn.value = 'Mengirim... ⏳';
     submitBtn.disabled = true;
 
-    // Collect form data
+    // Kumpulkan semua data form
     const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData.entries());
-    
-    // Add form timestamp
-    data.form_timestamp = new Date().toISOString();
+    const data = {};
+    formData.forEach((value, key) => {
+      // Skip field internal
+      if (['e_gs_SheetName', 'form_name', 'terms'].includes(key)) return;
+      if (value && value.toString().trim() !== '') {
+        data[key] = value.toString().trim();
+      }
+    });
 
-    console.log('Submitting to Google Sheets:', data);
+    // Label program yang lebih readable
+    const programLabels = {
+      personal:   'Wakaf Mushaf Personal',
+      parent:     'Hadiah Jariyah Orang Tua',
+      collective: 'Wakaf Kolektif Institusi'
+    };
+    if (data.programType) {
+      data.programType = programLabels[data.programType] || data.programType;
+    }
 
-    // Gunakan form-urlencoded (lebih compatible dengan Google Apps Script)
-    fetch('https://script.google.com/macros/s/AKfycbyVIbkZ-gVyirgVGXGJpGRbKrjya-6f8MYsVkcBB3CrzjH1cj_r6ehlo5fTr7ZaY2cX/exec', {
+    console.log("Data yang dikirim:", data);
+
+    // Kirim sebagai JSON ke Apps Script
+    fetch(SCRIPT_URL, {
       method: 'POST',
-      mode: 'cors',
-      cache: 'no-cache',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams(data).toString()
+      // no-cors karena Google Apps Script tidak bisa set CORS header dari ContentService
+      // Data tetap masuk ke sheet meskipun response tidak bisa dibaca
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
     })
-    .then(response => {
-      console.log('Response status:', response.status);
-      // Google Apps Script mengembalikan 200 meskipun dengan no-cors
-      if (response.status === 200 || response.status === 0) {
-        return response.text().then(text => {
-          console.log('Response:', text);
-          return { success: true };
-        });
-      }
-      throw new Error('Network response: ' + response.status);
+    .then(() => {
+      // no-cors selalu masuk .then() → redirect ke halaman terima kasih
+      const params = new URLSearchParams(data).toString();
+      window.location.href = 'thankyou.html?' + params;
     })
-    .then(result => {
-      if (result.success) {
-        // Redirect ke thankyou dengan semua data
-        const params = new URLSearchParams(data).toString();
-        window.location.href = 'thankyou.html?' + params;
-      }
-    })
-    .catch((error) => {
-      console.error('Submit error:', error);
-      alert('Gagal mengirim data. Silakan coba lagi. Error: ' + error.message);
+    .catch((err) => {
+      console.error('Submit error:', err);
+      alert('❌ Gagal mengirim data. Cek koneksi internet kamu, lalu coba lagi.');
       submitBtn.value = originalValue;
       submitBtn.disabled = false;
     });
 
     return false;
   }
-  </script>
+</script>
 
 </body>
 
