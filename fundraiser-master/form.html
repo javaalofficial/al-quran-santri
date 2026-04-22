@@ -180,6 +180,10 @@
 
                 <!-- Program Type (Hidden) -->
                 <input type="hidden" id="programType" name="programType" value="">
+                
+                <!-- Google Sheets Config (Hidden) -->
+                <input type="hidden" name="e_gs_SheetName" value="Form Responses">
+                <input type="hidden" name="form_name" value="Wakaf Form">
 
                 <!-- Personal Info Section -->
                 <div class="form-group row">
@@ -486,11 +490,10 @@
       }
     });
 
-  // NEW: Google Sheets Form Submit
+  // NEW: Google Sheets Form Submit dengan CORS-friendly approach
   function submitForm(event) {
     event.preventDefault();
 
-    // Show loading
     const submitBtn = event.target.querySelector('input[type="submit"]');
     const originalValue = submitBtn.value;
     submitBtn.value = 'Mengirim...';
@@ -499,21 +502,43 @@
     // Collect form data
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
+    
+    // Add form timestamp
+    data.form_timestamp = new Date().toISOString();
 
-    // Fetch to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbwUNStyjYNMte0EHr_fgQaWzuIfvq13T70sNKCy7wU36nMPdqvwcxBrkjr2BFTflswvjA/exec', {
+    console.log('Submitting to Google Sheets:', data);
+
+    // Gunakan form-urlencoded (lebih compatible dengan Google Apps Script)
+    fetch('https://script.google.com/macros/s/AKfycbyVIbkZ-gVyirgVGXGJpGRbKrjya-6f8MYsVkcBB3CrzjH1cj_r6ehlo5fTr7ZaY2cX/exec', {
       method: 'POST',
-      body: JSON.stringify(data)
+      mode: 'cors',
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams(data).toString()
     })
-    .then(() => {
-      // Success - redirect with query params
-      const params = new URLSearchParams(data).toString();
-      window.location.href = 'thankyou.html?' + params;
+    .then(response => {
+      console.log('Response status:', response.status);
+      // Google Apps Script mengembalikan 200 meskipun dengan no-cors
+      if (response.status === 200 || response.status === 0) {
+        return response.text().then(text => {
+          console.log('Response:', text);
+          return { success: true };
+        });
+      }
+      throw new Error('Network response: ' + response.status);
+    })
+    .then(result => {
+      if (result.success) {
+        // Redirect ke thankyou dengan semua data
+        const params = new URLSearchParams(data).toString();
+        window.location.href = 'thankyou.html?' + params;
+      }
     })
     .catch((error) => {
-      alert('Error submitting form: ' + error.message + '. Please try again.');
-    })
-    .finally(() => {
+      console.error('Submit error:', error);
+      alert('Gagal mengirim data. Silakan coba lagi. Error: ' + error.message);
       submitBtn.value = originalValue;
       submitBtn.disabled = false;
     });
