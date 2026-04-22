@@ -210,7 +210,7 @@ strong, b,
 /* Mobile responsive margin */
 @media (max-width: 991.98px) {
   .responsive-title-margin {
-    margin: 20px 0 auto !important;
+    margin: 520px 0 auto !important;
   }
 }
 

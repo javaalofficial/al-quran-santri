@@ -10,9 +10,36 @@
   <meta name="description" content="Wakaf Al-Qur'an untuk Santri Penghafal di Pelosok Nusantara. Yayasan Al-Fatihah AQSI - Transparan, Terdaftar Resmi BWI. Dapatkan pahala jariyah abadi.">
   <meta name="keywords" content="wakaf al quran, donasi mushaf, santri penghafal, tahfidz, sedekah jariyah, yayasan wakaf quran">
   <meta property="og:title" content="AQSI - Wakaf Al-Qur'an Santri">
-  <meta property="og:description" content="Bantu ribuan santri penghafal Al-Qur'an mendapatkan mushaf layak. Transparan, terdaftar resmi.">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+   <meta property="og:description" content="Bantu ribuan santri penghafal Al-Qur'an mendapatkan mushaf layak. Transparan, terdaftar resmi.">
+   <meta property="og:type" content="website">
+   <meta property="og:image" content="https://aqsi.or.id/images2/wakaf al Qur'an untuk Santri.webp">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="AQSI - Wakaf Al-Qur'an Santri">
+   <meta name="twitter:description" content="Bantu ribuan santri penghafal Al-Qur'an mendapatkan mushaf layak. Transparan, terdaftar resmi.">
+   <meta name="twitter:image" content="https://aqsi.or.id/images2/wakaf al Qur'an untuk Santri.webp">
+   <link rel="canonical" href="https://aqsi.or.id/">
+   <link rel="manifest" href="manifest.json">
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "NGO",
+     "name": "AQSI - Wakaf Al-Qur'an Santri",
+     "description": "Wakaf Al-Qur'an untuk Santri Penghafal di Pelosok Nusantara. Yayasan Al-Fatihah AQSI - Transparan, Terdaftar Resmi BWI. Dapatkan pahala jariyah abadi.",
+     "url": "https://aqsi.or.id",
+     "logo": "https://aqsi.or.id/images2/LOGO-AQSI.png",
+     "sameAs": [
+       "https://www.facebook.com/aqsiofficial",
+       "https://www.instagram.com/aqsialfatihah/",
+       "https://www.youtube.com/@aqsialquransantri"
+     ],
+     "contactPoint": {
+       "@type": "ContactPoint",
+       "telephone": "+62-XXX-XXXXXXX",
+       "contactType": "customer service"
+     }
+   }
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="images2/wakaf al Qur'an untuk Santri.webp" as="image">
@@ -69,7 +96,7 @@
 
 
       <div class="box-92819" style="min-width: 300px !important;">
-        <h1 class="text-white mb-5 heading-hero-left" style="font-size: 35px; font-family: 'Montserrat', sans-serif; font-weight: 700;">Jaga Hafalan Mereka, Raih Pahala tanpa batas</h1>
+        <div style="margin-bottom: -40px !important; "><h1 class="text-white mb-5 heading-hero-left" style="font-size: 35px; font-family: 'Montserrat', sans-serif; font-weight: 700;">Jaga Hafalan Mereka, Raih Pahala tanpa batas</h1></div>
         <p class="lead text-white mb-3">Bantu Ribuan santri hafidz di Pelosok Negeri mendapatkan al qur'an yang layak.</p>
         <p>
           <a href="program.html" class="btn btn-primary py-3 px-5 rounded-0 mr-3 mb-3 mb-md-0">Donasi sekarang</a>
@@ -118,7 +145,7 @@
           <div class="col-md-4 mb-4">
             <div class="cause shadow-sm" style="margin: 0;">
               <a href="#" class="cause-link d-block">
-                 <img src="images2/Pahala jariyah dari wakaf al Qur'an.png" alt="Image" class="img-fluid" width="400" height="300">
+                  <img src="images2/Pahala jariyah dari wakaf al Qur'an.png" alt="Al-Quran untuk Aceh program image" class="img-fluid" width="400" height="300" loading="lazy">
                 <div class="custom-progress-wrap">
                   <span class="caption">75% complete</span>
                   <div class="custom-progress-inner">
@@ -142,7 +169,7 @@
           <div class="col-md-4 mb-4">
             <div class="cause shadow-sm" style="margin: 0;">
               <a href="#" class="cause-link d-block">
-                 <img src="images2/Sedekah jariyah untuk santri pedalaman.webp" alt="Image" class="img-fluid" width="400" height="300">
+                  <img src="images2/Sedekah jariyah untuk santri pedalaman.webp" alt="Sedekah jariyah untuk santri pedalaman program image" class="img-fluid" width="400" height="300" loading="lazy">
                 <div class="custom-progress-wrap">
                   <span class="caption">20% complete</span>
                   <div class="custom-progress-inner">
@@ -167,7 +194,7 @@
           <div class="col-md-4 mb-4">
             <div class="cause shadow-sm" style="margin: 0;">
               <a href="#" class="cause-link d-block">
-                 <img src="images2/Wakaf al Qur'an untuk orang tua tercinta.webp" alt="Image" class="img-fluid" width="400" height="300">
+                  <img src="images2/Wakaf al Qur'an untuk orang tua tercinta.webp" alt="Wakaf al Qur'an untuk orang tua tercinta program image" class="img-fluid" width="400" height="300" loading="lazy">
                 <div class="custom-progress-wrap">
                   <span class="caption">75% complete</span>
                   <div class="custom-progress-inner">
@@ -393,6 +420,13 @@
 
     <script src="js/main.js" defer></script>
 
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => console.log('SW registered'))
+          .catch(error => console.log('SW registration failed'));
+      }
+    </script>
 
     <script>
       // Initialize Video Carousel

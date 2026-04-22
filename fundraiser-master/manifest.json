@@ -1,0 +1,17 @@
+{
+  "name": "AQSI - Wakaf Al-Qur'an Santri",
+  "short_name": "AQSI",
+  "description": "Wakaf Al-Qur'an untuk Santri Penghafal di Pelosok Nusantara",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "images2/LOGO-AQSI.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}</content>
+<parameter name="filePath">C:\Users\user\Documents\al-quran-santri\fundraiser-master\manifest.json
