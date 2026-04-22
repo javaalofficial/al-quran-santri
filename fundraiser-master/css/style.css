@@ -5,6 +5,23 @@
   --success: #10b981 !important;
 }
 
+/* Footer button styling - copied from tentang.html structure */
+.site-footer .btn {
+  background-color: white !important;
+  border: 2px solid var(--success) !important;
+  color: var(--success) !important; /* Green text */
+}
+
+.site-footer .btn:hover {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+
+.text-success {
+  color: var(--success) !important;
+}
+
 /* Font Families */
 body, p, span, div, label, input, textarea, button, a {
   font-family: 'Roboto', sans-serif !important;
@@ -63,14 +80,14 @@ html {
 }
 
 /* Font Weight Reset - SINGLE INSTANCE */
-*:not(.font-override):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(strong):not(b):not([class*="bold"]):not(.font-weight-bold):not(.font-weight-bolder), *::before:not(.font-override), *::after:not(.font-override) {
+*:not(.font-override):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(strong):not(b):not([class*=\"bold\"]):not(.font-weight-bold):not(.font-weight-bolder), *::before:not(.font-override), *::after:not(.font-override) {
   font-weight: 400 !important;
 }
 
 /* Override for headings and bold elements to preserve hierarchy */
 h1, h2, h3, h4, h5, h6,
 strong, b,
-[class*="bold"],
+[class*=\"bold\"],
 .font-weight-bold,
 .font-weight-bolder {
   font-weight: inherit !important;
@@ -183,12 +200,23 @@ strong, b,
   border-top: 1px solid rgba(0,0,0,0.06) !important;
 }
 
+/* Responsive margin for Kabar Kebaikan h2 */
+.responsive-title-margin {
+  margin: 100px 0 20px auto !important;
+}
+
+/* Mobile responsive margin */
+@media (max-width: 991.98px) {
+  .responsive-title-margin {
+    margin: 20px 0 auto !important;
+  }
+}
+
 /* Override for headings and bold elements to preserve hierarchy */
 h1, h2, h3, h4, h5, h6,
 strong, b,
-[class*="bold"],
+[class*=\"bold\"],
 .font-weight-bold,
 .font-weight-bolder {
   font-weight: inherit !important;
 }
-
